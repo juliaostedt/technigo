@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solution for Technigo Coding Challenge</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      body {
+        background: linear-gradient(
+          106.7deg,
+          rgb(151, 150, 240) 12.1%,
+          rgb(255, 206, 236) 63.2%
+        );
+        color: #5c5470;
+        font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+      }
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 34px;
+        color: #5c5470;
+        line-height: 1.1em;
+        letter-spacing: -1.5px;
+      }
+      h2 {
+        text-align: center;
+        font-weight: lighter;
+        font-size: 20px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 14px;
+        margin: 20px 0 20px;
+      }
+      button {
+        display: block;
+        margin: 40px auto;
+        background: #d6b8ee;
+        color: #5c5470;
+        font-size: 15px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+      .devices {
+        display: block;
+        margin: 0 auto;
+        max-width: 55%;
+        border-radius: 300px;
+      }
+      .read-more {
+        text-decoration: none;
+        font-size: 13px;
+      }
+      a:visited {
+        color: #5c5470;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Cookies</h1>
+      <hr />
+      <h2>What are they?</h2>
+      <img
+        src="https://c.tadst.com/gfx/600x337/cookies.png?1"
+        alt="devices"
+        class="devices"
+      />
+      <p>
+        <strong>Cookies</strong> are small files of information that a web
+        server generates and sends to a web browser. Web browsers store the
+        cookies they receive for a predetermined period of time, or for the
+        length of a user's session on a website. They attach the relevant
+        cookies to any future requests the user makes of the web server. Cookies
+        help inform websites about the user, enabling the websites to
+        personalize the user experience. For example, ecommerce websites use
+        cookies to know what merchandise users have placed in their shopping
+        carts. In addition, some cookies are necessary for security purposes,
+        such as authentication cookies. <br />
+        <br />Follow the links below to read more:
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://www.cookiesandyou.com/about-cookies/"
+            target="_blank"
+            class="read-more"
+            >Cookies & You</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://cookieinformation.com/what-is-a-cookie/"
+            target="_blank"
+            class="read-more"
+            >Cookie information</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.howtogeek.com/119458/htg-explains-whats-a-browser-cookie/"
+            target="_blank"
+            class="read-more"
+            >How to geek explains cookies</a
+          >
+        </li>
+      </ul>
+      <button class="contact-us">Questions?</button>
+    </div>
+    <script>
+      function contact() {
+        let approve = prompt("Would you like us to contact you?");
+        if (approve === "Yes" || approve === "yes") {
+          let name = prompt("What's your name?");
+          prompt("What's your email address?");
+          alert("Thank you " + name + ", we'll be in touch! 👋🍪");
+        } else {
+          alert("Ok, have a nice day & eat a cookie! 🌻🍪");
+        }
+      }
+      let contactButton = document.querySelector(".contact-us");
+      contactButton.addEventListener("click", contact);
+    </script>
+  </body>
+</html>
